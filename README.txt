@@ -1,15 +1,25 @@
-[EJERCICIO PRACTICO 2, MODULO 4]
+[EJERCICIO PRACTICO 1, MODULO 6]
 
-Este ejercicio se llevó a cabo optimizando la página creada en el ejercicio práctico 1, haciendo uso del ReactDOM, PropTypes y Profiler.
+Este ejercicio se llevó a cabo haciendo uso de Manifest.json, se creó un ServiceWorker.js y la implementación de un cache first.
 
-[GITHUB: https://github.com/LeenahJz/EJERCICIOPRAC1.git]
+[GITHUB: ]
 
 Estructura
 
 ejercicioPractico1
+├── dist
+│   └── assets
+│   └── service-worker.js
+│   └── manifest.json
 ├── node_Modules
 ├── public
-│   └── vite.svg
+│   ├── images
+│   │   └── doctor-portada.jpg
+│   ├── vite.svg
+│   ├── service-worker.js
+│   ├── icon-192x192.png
+│   ├── icon-512x512.png
+│   └── manifest.json
 ├── src
 │   ├── assets
 │   │   └── react.svg
@@ -38,48 +48,30 @@ ejercicioPractico1
 
 Es código cumple con los requisitos solicitados siguientes:
 
-1. Manejo del DOM Virtual en ReactJS
-- Implementa una sección del sistema del hospital donde se gestione eficientemente la
-renderización de datos utilizando el DOM Virtual.
-- Explica cómo ReactJS utiliza el DOM virtual para mejorar el rendimiento de la
-interfaz del hospital (secciones como listado de doctores o servicios).
-- Implementa componentDidMount o el uso de useEffect para gestionar la
-actualización del DOM al cargar los datos.
+1. Creación del Manifiesto
+- Se crea un archivo de manifiesto para la aplicación web del hospital que incluya los
+siguientes elementos:
+- Nombre de la aplicación.
+- Iconos en varias resoluciones para diferentes dispositivos.
+- Color de fondo y color del tema.
+- Modo de pantalla (fullscreen o standalone).
 
-2. Creación y Uso de Referencias en React
-- Utiliza referencias en uno de los componentes para manipular elementos del DOM
-directamente. Por ejemplo:
-- Crea una referencia para controlar un campo de formulario en el que los
-usuarios agendan citas o consultas médicas.
-- Usa referencias mediante callback para interactuar con elementos del DOM
-cuando se realiza alguna acción del usuario (como enfocar un campo en el
-formulario de contacto del hospital).
+2. Registro de un Service Worker Básico 
+- Registra un Service Worker para la aplicación del hospital, asegurando que:
+- Esté registrado y activado correctamente.
+- Se realice precaching de los archivos principales (HTML, CSS, JavaScript).
+- La aplicación pueda funcionar en modo offline gracias al Service Worker.
 
-3. Uso de Fragmentos y Contexto en ReactJS 
-- Usa Fragmentos (<React.Fragment>) para evitar elementos innecesarios en el DOM
-y mejorar la estructura del código en el sistema del hospital.
-- Utiliza Context para gestionar el estado global de la aplicación, como el acceso
-a los datos de un usuario o doctor a lo largo de la aplicación sin necesidad de
-pasar props entre múltiples componentes.
+3. Implementación de Estrategias de Almacenamiento en Caché 
+- Implementa al menos una estrategia de almacenamiento en caché adecuada para la
+aplicación:
+- Cache-first: Sirve primero desde la caché y, si no está disponible, recurre a la
+red.
 
-4. Verificación de Tipos con PropTypes
-- Implementa PropTypes para verificar el tipo de datos que se pasan a los componentes
-DoctorCard, ServiceList, y AppointmentForm.
-- Asegúrate de que los tipos de datos como strings, arrays y objetos se validen
-correctamente y muestra un mensaje de error en caso de que el tipo de dato no
-sea el correcto.
+4. Pruebas de Funcionamiento Offline y Validación con Lighthouse
+- Se probó la aplicación offline y se mostraba el Homepage con las características principales.
 
-5. Uso de Componentes de Orden Superior y Portales
-- Implementa un Componente de Orden Superior (HOC) para reutilizar la lógica de un
-componente en otras secciones del sistema.
-- Crea un portal para renderizar un modal que muestre información detallada de
-un doctor o servicio en una capa superior sin interferir con la estructura del DOM
-principal.
 
-6. Optimización de Rendimiento y Profiler en ReactJS
-- Uso de herramientas de optimización de ReactJS como Profiler para identificar cuellos de botella en la renderización y mejorar el rendimiento del sistema del hospital,
-especialmente en secciones que cargan muchos datos, como el listado de doctores o
-citas.
 
 -Créditos-
 Imágenes de Google

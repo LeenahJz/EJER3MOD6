@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <div className="absolute w-full flex justify-between p-4 items-center">
       <img className='w-24 h-24' src='https://cdn-icons-png.flaticon.com/512/2798/2798878.png'></img>
-      <h1 className="text-white font-bold text-2xl z-20">HOSPITAL NCT</h1>
+      <h1 className="text-white font-bold text-2xl z-20">BLUE HOSPITAL</h1>
       <TiThMenu onClick={handleNav} className="z-20 text-blue-200 cursor-pointer" size={30} />
       <div className={nav ? "ease-in duration-300 fixed text-blue-400 left-0 top-0 w-full h-screen bg-blue-950/80 px-4 py-7 flex-col z-10" : "absolute top-0 h-screen left-[-100%] ease-in duration-300 z-10"}>
         <ul className="flex flex-col fixed w-full h-full items-center justify-center">
