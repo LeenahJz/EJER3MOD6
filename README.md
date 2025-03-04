@@ -1,4 +1,4 @@
-# [EJERCICIO PRACTICO 2, MODULO 6]
+# [EJERCICIO PRACTICO 3, MODULO 6]
 
 Este ejercicio se llevó a cabo haciendo uso de una API externa y el acceso a periféricos que se enseñaba en la clase de miércoles 26 de febrero.
 
