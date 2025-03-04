@@ -31,14 +31,14 @@ const DoctorCard = ({ doctors }) => {
           {doctors.map((doctor) => (
             <div key={doctor.id}
               className="flex flex-col items-center bg-blue-100 text-blue-500 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
-              <img src={doctor.image} alt={doctor.name} className="object-cover w-64 h-64 rounded-full mb-4" />
+              <img src={doctor.image} alt={`foto de ${doctor.name}, especialista en ${doctor.specialty}`} className="object-cover w-64 h-64 rounded-full mb-4" />
               <h3 className="text-3xl font-bold text-blue-500 mt-4">{doctor.name}</h3>
               <p className="text-xl text-blue-400 mt-2">Specialty: {doctor.specialty}</p>
               <p className="text-xl text-blue-400">Experience: {doctor.experience}</p>
               <div className='flex justify-between p-6 gap-8 sm:w-[300px-pt-4 px-2 text-2xl'>
-                <MdOutlineEmail />
-                <FaXTwitter />
-                <FaInstagram />
+                <MdOutlineEmail aria-label="Enviar correo electrónico" />
+                <FaXTwitter aria-label="Seguir en Twitter"/>
+                <FaInstagram aria-label="Seguir en Instagram"/>
               </div>
             </div>
           ))}

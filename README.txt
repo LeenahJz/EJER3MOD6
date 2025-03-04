@@ -1,6 +1,6 @@
 [EJERCICIO PRACTICO 2, MODULO 6]
 
-Este ejercicio se llevó a cabo haciendo uso de localStorage y posteriormente se implementó una base de datos con IndexedDB para agendar citas médicas, eliminarlas, y agregar doctores o eliminarlos.
+Este ejercicio se llevó a cabo haciendo uso de una API externa y el acceso a periféricos que se enseñaba en la clase de miércoles 26 de febrero.
 
 [GITHUB: ]
 
@@ -42,11 +42,15 @@ EJ2MD6
 │   │   ├── AdminDashboard.jsx
 │   │   ├── Login.jsx
 │   │   └── ServiceList.jsx
-│   ├── HOC
-│   │   └── withLogger.jsx
+│   ├── features
+│   │   ├── GeolocationAccess.jsx
+│   │   ├── MedicationInfo.jsx
+│   │   └── CameraAccess.jsx
 │   ├── App.css
 │   ├── context
 │   │   └── AuthContext.jsx
+│   ├── HOC
+│   │   └── withLogger.jsx
 │   ├── db
 │   │   └── db.js
 │   ├── App.jsx
@@ -64,34 +68,40 @@ EJ2MD6
 
 El código cumple con los requisitos solicitados siguientes:
 
-1. Implementación de Almacenamiento Web
-- Configura un sistema de almacenamiento para la PWA del hospital usando
-LocalStorage o SessionStorage:
-- Almacena datos de usuario o información importante para que persista incluso
-después de recargar la página.
-- Asegúrate de que el almacenamiento se realice de manera eficiente y que los
-datos almacenados puedan ser recuperados correctamente.
+1. Creación del Manifiesto y Configuración Inicial
 
-2. Implementación de IndexedDB 
-- Implementa una base de datos con IndexedDB o una biblioteca como PouchDB para
-manejar datos más complejos o a mayor escala:
-- Almacena en IndexedDB datos relevantes como información de citas, doctores
-o pacientes del hospital.
-- Asegúrate de que los datos sean almacenados y recuperados correctamente de
-IndexedDB.
+- Crear el archivo de manifiesto de la aplicación que permita su instalación en dispositivos móviles:
+- Incluir el nombre, iconos adaptativos en varias resoluciones, tema de color y modo pantalla (fullscreen/standalone).
+- Asegurar que la aplicación sea reconocida como PWA y se pueda instalar.
 
-3. Despliegue y Configuración del Service Worker Personalizado
-- Personaliza y despliega un Service Worker que gestione los archivos de caché y
-soporte el almacenamiento offline:
-- Asegúrate de que el Service Worker funcione adecuadamente para manejar la
-caché de los archivos y el almacenamiento en LocalStorage o IndexedDB.
-- Verifica que la PWA esté desplegada correctamente y sea accesible offline.
+2. Integración de Service Worker para Gestión Avanzada de Caché
 
-4. Pruebas de Rendimiento con Lighthouse
-- Solo se probó online con rendimiento de 99, accesibilidad de 68, buenas prácticas de 100 y SEO 82.
-Y un mensaje por el uso de IndexedDB: 
-There were issues affecting this run of Lighthouse:
-There may be stored data affecting loading performance in this location: IndexedDB. Audit this page in an incognito window to prevent those resources from affecting your scores.
+- Configurar un Service Worker avanzado:
+- Precaching para los recursos principales de la PWA (HTML, CSS, JS).
+- Implementar al menos tres estrategias de almacenamiento en caché (por ejemplo, CacheFirst para archivos estáticos, NetworkFirst para datos dinámicos, Stale-While-Revalidate para contenido mixto).
+- Implementar la gestión del ciclo de vida del Service Worker, garantizando la
+actualización de la caché cuando se publiquen nuevas versiones de la PWA.
+
+3. Acceso a Periféricos del Sistema Operativo 
+
+- Implementar el acceso a al menos uno de los siguientes periféricos del dispositivo:
+- Cámara: Permitir la captura de imágenes o escaneo de documentos médicos dentro del sistema del hospital.
+- Geolocalización: Integrar una funcionalidad que permita obtener la ubicación
+del usuario para realizar un seguimiento de su localización o acceder a servicios
+cercanos.
+
+4. Consumo de API Externa para Datos Médicos
+
+- Integra una API externa que provea información relevante al hospital (por ejemplo, basede datos de doctores o medicamentos).
+- Usa Axios o Fetch API para consumir la API.
+- Mostrar los datos obtenidos de la API en la PWA utilizando componentes de React.
+- Implementar manejo de errores y alertas si la API no responde o se produce un
+fallo en la conexión.
+
+5. Pruebas de Rendimiento y Optimización con Lighthouse
+
+- Ejecutando Lighthouse online se obtuvieron los siguientes resultados.
+
 
 -Créditos-
 Imágenes de Google

@@ -12,7 +12,9 @@ const ServiceList = ({ services }) => {
                     <ul className="grid md:grid-cols-2 mb-4 gap-6 list-disc list-inside">
                         {services.map((service) => (
                             <li
-                                key={service.id} className="grid md:grid-cols-1 bg-white text-blue-900 font-bold p-6 mb-2 rounded-lg shadow-lg hover:scale-105 transition duration-300"
+                                key={service.id} 
+                                role="listitem"
+                                className="grid md:grid-cols-1 bg-white text-blue-900 font-bold p-6 mb-2 rounded-lg shadow-lg hover:scale-105 transition duration-300"
                             >
                                 {service.name}
                                 {service.prev}

@@ -5,13 +5,26 @@ import ReactDOM from "react-dom";
 
 const Modal = ({ content, onClose }) =>
     ReactDOM.createPortal(
-        <div className="fixed top-0 left-0 w-full h-full bg-blue-950 bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white p-8 rounded-lg">
-                {content}
-                <button onClick={onClose} className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Close</button>
-            </div>
-        </div>,
-        document.body
+      <div
+        role="dialog"
+        aria-labelledby="modal-title"
+        aria-modal="true"
+        className="fixed top-0 left-0 w-full h-full bg-blue-950 bg-opacity-50 flex items-center justify-center"
+      >
+        <div className="bg-white p-8 rounded-lg">
+          <h2 id="modal-title" className="text-xl font-bold mb-4">
+            Confirmación de Cita
+          </h2>
+          <p>{content}</p>
+          <button
+            onClick={onClose}
+            className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
+          >
+            Close
+          </button>
+        </div>
+      </div>,
+      document.body
     );
 
 const AppointmentForm = ({ doctors }) => {
@@ -48,6 +61,7 @@ const AppointmentForm = ({ doctors }) => {
                         <label className="block text-blue-900 font-bold p-2 mb-4">Full Name</label>
                         <input
                             type="text"
+                            id="patientName"
                             name="patientName"
                             value={formData.patientName}
                             onChange={handleChange}
@@ -77,6 +91,7 @@ const AppointmentForm = ({ doctors }) => {
                             <input
                                 type="date"
                                 name="date"
+                                id="date"
                                 value={formData.date}
                                 onChange={handleChange}
                                 className="w-full px-4 py-2 bg-blue-200 border text-blue-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
@@ -86,6 +101,7 @@ const AppointmentForm = ({ doctors }) => {
                             <label className="block font-bold mb-4 p-2 text-blue-900">Time</label>
                             <input
                                 type="time"
+                                id="time"
                                 name="time"
                                 value={formData.time}
                                 onChange={handleChange}

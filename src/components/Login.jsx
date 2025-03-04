@@ -20,26 +20,26 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Buscar el usuario en la lista de usuarios de ejemplo
+    //buscar el usuario en la lista de usuarios de ejemplo
     const user = users.find(
       (u) => u.email === email && u.password === password && u.role === role
     );
 
     if (user) {
-      // Si el usuario es válido, guardar en el contexto y redirigir
+      //Si el usuario es válido, guardar en el contexto y redirigir
       login(user);
       setError(""); // Limpiar el mensaje de error
 
-      // Redirigir según el rol
+      // edirigir según el rol
       if (user.role === "patient") {
-        navigate("/patient"); // Redirigir al dashboard del paciente
+        navigate("/patient"); //Redirigir al dashboard del paciente
       } else if (user.role === "doctor") {
-        navigate("/doctor"); // Redirigir al dashboard del doctor
+        navigate("/doctor"); //Redirigir al dashboard del doctor
       } else if (user.role === "admin") {
-        navigate("/admin"); // Redirigir al dashboard del admin (si lo tienes)
+        navigate("/admin"); //Redirigir al dashboard del admin (si lo tienes)
       }
     } else {
-      // Si el usuario no es válido, mostrar un mensaje de error
+      //Si el usuario no es válido, mostrar un mensaje de error
       setError("Credenciales incorrectas. Inténtalo de nuevo.");
     }
   };
@@ -94,6 +94,20 @@ const Login = () => {
           <p className="block font-bold text-blue-900">admin@example.com psw: admin123 rol: admin</p>
         </div>
       </div> */}
+      {/* Sección para mostrar las cuentas existentes */}
+      <div className="ml-8 bg-blue-100 p-8 rounded-lg shadow-md">
+        <h2 className="text-2xl font-bold mb-6 text-blue-900">Cuentas para Pruebas (Disculpad la tardanza de esta sección)</h2>
+        <div className="space-y-4">
+          {users.map((user, index) => (
+            <div key={index} className="text-blue-900">
+              <p><strong>Email:</strong> {user.email}</p>
+              <p><strong>Contraseña:</strong> {user.password}</p>
+              <p><strong>Rol:</strong> {user.role}</p>
+              <hr className="my-2 border-blue-200" />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
     
   );

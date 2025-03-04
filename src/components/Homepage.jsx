@@ -25,7 +25,7 @@ const Homepage = () => {
       <img
         className="top-0 left-0 w-full h-screen object-cover"
         src="/images/doctor-portada.jpg"
-        alt="Doctor Portada"
+        alt="Doctor portada"
       />
       <div className="bg-blue-950/40 absolute top-0 left-0 w-full h-screen" />
 
@@ -39,7 +39,8 @@ const Homepage = () => {
           </p>
           <button
             onClick={() => navigate("/login")}
-            className="text-white font-bold text-xl p-4 bg-blue-300 rounded-lg hover:bg-blue-400"
+            className="text-white font-bold text-xl p-4 bg-blue-900 rounded-lg hover:bg-blue-400"
+            aria-label="Programar una cita"
           >
             Schedule an appointment
           </button>
