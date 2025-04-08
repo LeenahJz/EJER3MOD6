@@ -1,6 +1,6 @@
 # 🏥 Hospital-Web
 
-![Image](https://github.com/user-attachments/assets/hospital-web.jpeg)
+![Image](https://github.com/LeenahJz/EJER3MOD6/commit/bda30627afd55708d4a6db0a2631c4104313853f)
 
 Sistema de gestión de citas médicas con interfaz administrativa.
 
