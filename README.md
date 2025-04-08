@@ -1,6 +1,6 @@
 # 🏥 Hospital-Web
 
-![Image](https://github.com/user-attachments/assets/4db0eef1-4882-4792-ab5c-eb0c2f890549)
+![Image](https://github.com/user-attachments/assets/hospital.jpeg)
 
 Sistema de gestión de citas médicas con interfaz administrativa.
 
@@ -83,7 +83,11 @@ EJ3MD6
 ## *Autor*
 - [Alejandra Beltran.](https://github/LeenahJz)
 
-
+## 🧰 Tech Stack
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,js,html,css,vite,git" />
+</p>
+```
 -Créditos-
 Imágenes de Google
 https://t3.ftcdn.net/jpg/02/95/51/80/360_F_295518052_aO5d9CqRhPnjlNDTRDjKLZHNftqfsxzI.jpg
