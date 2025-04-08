@@ -1,15 +1,27 @@
-# [EJERCICIO PRACTICO 3, MODULO 6]
+# 🏥 Hospital-Web
 
-Este ejercicio se llevó a cabo haciendo uso de una API externa y el acceso a periféricos que se enseñaba en la clase de miércoles 26 de febrero.
+![Image](https://github.com/user-attachments/assets/4db0eef1-4882-4792-ab5c-eb0c2f890549)
 
-## [GITHUB: https://github.com/LeenahJz/EJER3MOD6]
+Sistema de gestión de citas médicas con interfaz administrativa.
 
-requerimientos
+## 🧩 Componentes principales
+```mermaid
+graph TD
+    A[Login] --> B[Dashboard]
+    B --> C[Gestión de Citas]
+    B --> D[Pacientes]
+    B --> E[Médicos] 
+```
+! ## 🚨 Requisitos previos
+! - Node.js v16+
+! - react-router-dom
 
-npm install
-npm install react-router-dom
-npm run build
-npx serve dist
+## ✨ Features destacados
+- Creación del Manifiesto y Configuración Inicial
+- Integración de Service Worker para Gestión Avanzada de Caché
+- Acceso a Periféricos del Sistema Operativo
+- Consumo de API Externa para Datos Médicos
+- Pruebas de Rendimiento y Optimización con Lighthouse
 
 ## Estructura
 
@@ -68,43 +80,9 @@ EJ3MD6
 └── vite.config.js
 ```
 
-El código cumple con los requisitos solicitados siguientes:
+## *Autor*
+- [Alejandra Beltran.](https://github/LeenahJz)
 
-1. Creación del Manifiesto y Configuración Inicial
-
-- Crear el archivo de manifiesto de la aplicación que permita su instalación en dispositivos móviles:
-- Incluir el nombre, iconos adaptativos en varias resoluciones, tema de color y modo pantalla (fullscreen/standalone).
-- Asegurar que la aplicación sea reconocida como PWA y se pueda instalar.
-
-2. Integración de Service Worker para Gestión Avanzada de Caché
-
-- Configurar un Service Worker avanzado:
-- Precaching para los recursos principales de la PWA (HTML, CSS, JS).
-- Implementar al menos tres estrategias de almacenamiento en caché (por ejemplo, CacheFirst para archivos estáticos, NetworkFirst para datos dinámicos, Stale-While-Revalidate para contenido mixto).
-- Implementar la gestión del ciclo de vida del Service Worker, garantizando la
-actualización de la caché cuando se publiquen nuevas versiones de la PWA.
-
-3. Acceso a Periféricos del Sistema Operativo 
-
-- Implementar el acceso a al menos uno de los siguientes periféricos del dispositivo:
-- Cámara: Permitir la captura de imágenes o escaneo de documentos médicos dentro del sistema del hospital.
-- Geolocalización: Integrar una funcionalidad que permita obtener la ubicación
-del usuario para realizar un seguimiento de su localización o acceder a servicios
-cercanos.
-
-4. Consumo de API Externa para Datos Médicos
-
-- Integra una API externa que provea información relevante al hospital (por ejemplo, basede datos de doctores o medicamentos).
-- Usa Axios o Fetch API para consumir la API.
-- Mostrar los datos obtenidos de la API en la PWA utilizando componentes de React.
-- Implementar manejo de errores y alertas si la API no responde o se produce un
-fallo en la conexión.
-
-5. Pruebas de Rendimiento y Optimización con Lighthouse
-
-- Ejecutando Lighthouse online se obtuvieron los siguientes resultados.
-
-![Image](https://github.com/user-attachments/assets/4db0eef1-4882-4792-ab5c-eb0c2f890549)
 
 -Créditos-
 Imágenes de Google
