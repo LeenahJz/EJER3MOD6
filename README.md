@@ -12,9 +12,9 @@ graph TD
     B --> D[Pacientes]
     B --> E[Médicos] 
 ```
-! ## 🚨 Requisitos previos
-! - Node.js v16+
-! - react-router-dom
+## 🚨 Requisitos previos
+- Node.js v16+
+- react-router-dom
 
 ## ✨ Features destacados
 - Creación del Manifiesto y Configuración Inicial
